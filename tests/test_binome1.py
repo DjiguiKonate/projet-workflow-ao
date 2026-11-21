@@ -1,7 +1,13 @@
 """Fichier 4 : Tests unitaires pour vérifier le bon fonctionnement du nettoyage."""
 
+from pathlib import Path
+import sys
+
 import numpy as np
 import pandas as pd
+
+# Ajouter le dossier source/ au chemin Python pour importer nettoyage.py
+sys.path.append(str(Path(__file__).resolve().parent.parent / "source"))
 
 from nettoyage import nettoyer_dataset, nettoyer_texte, parser_montant
 
